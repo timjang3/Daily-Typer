@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Daily Typer",
+    "version": "1.0",
+    "description": "Know your real typing speed in everyday typing activities.",
+
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+
+    "permissions":[
+        "storage"
+    ],
+
+    "content_scripts": [
+        {
+            "matches":["http://*/*", "https://*/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    }
+}

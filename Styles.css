@@ -1,0 +1,18 @@
+body{
+    width: 300px;
+    background-color: #222831;
+}
+#sentence {
+    margin-top: 15px;
+    font: 15px Courier, sans-serif;
+    text-align: center;
+    color: #dddddd;
+  }
+#wpm {
+    margin-top: 7px;
+    font: 25px Courier, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #dddddd;
+    letter-spacing: 2px;
+  }
