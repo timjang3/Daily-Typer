@@ -10,9 +10,30 @@ body{
   }
 #wpm {
     margin-top: 7px;
+    margin-bottom: 17px;
     font: 25px Courier, sans-serif;
     text-align: center;
     font-weight: bold;
     color: #dddddd;
     letter-spacing: 2px;
-  }
+}
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+}
+button{
+  background-color: #30475e;
+  font: 13px Courier, sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 0px;
+  border: none;
+  padding: 4px 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #dddddd;
+}
