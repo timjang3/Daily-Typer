@@ -1,35 +1,41 @@
-let sentence = "This is a test!";
+
 let typing = "";
 let count = 0;
 let shortElapsed =  0;
 let cutTime = 0;
 
 window.addEventListener('keydown', myInput, true);
-//document.addEventListener(update);
 
 let shortStart2 = 0;
-let check = true;
 
 let elapsed = 0;
 let start = 0;
 let finaltime = 0;
 let wpm = 0;
 
-let reset = "";
-/*
-function update(){
-    chrome.storage.local.get('reset', function(data) {
-        reset = data.reset;
+let check = "";
 
-        if(reset === "yes"){
-            typing = "";
-            cutTime = 0;
-            chrome.storage.local.set({'time': 0});
-            chrome.storage.local.set({'reset': "no"});
-        }
-    });
+
+function update(){
+    typing = "";
+    cutTime = 0;
+    wpm = 0;
+    chrome.storage.local.set({'time': wpm});
 }
-*/
+
+
+document.addEventListener("visibilitychange", function () {
+    if(!document.hidden) {
+        chrome.storage.local.set({'time': wpm});
+    }
+  }, false);
+
+  window.addEventListener('load', (event) => {
+    if(!document.hidden) {
+        chrome.storage.local.set({'time': wpm});
+    }
+  });
+
 function myInput(event){
     if(typing.length == 0){
         masterStart = window.performance.now();
@@ -39,7 +45,7 @@ function myInput(event){
     elapsed = end - start;
     start = window.performance.now();
 
-    if(elapsed > 750){
+    if(elapsed > 1000){
         cutTime += elapsed;
     }
     

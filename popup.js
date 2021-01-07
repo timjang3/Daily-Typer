@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   link.addEventListener('click', function() {
       reset();
+      chrome.runtime.sendMessage({
+        msg: "hello"
+    });
   });
 });
 
@@ -21,7 +24,6 @@ function updatePopup(){
     chrome.storage.local.get('time', function(data) {
       time = data.time;
       document.getElementById("wpm").innerHTML = data.time + " wpm";
-  
     });
     /*
     chrome.storage.local.get('typed', function(data) {
