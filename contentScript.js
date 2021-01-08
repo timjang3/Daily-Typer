@@ -62,6 +62,9 @@ function myInput(event){
     finaltime = masterElapsed - cutTime;
     wpm = Math.round((typing.length/(finaltime/1000/60))/5);
 
+    chrome.runtime.sendMessage({
+        speed: wpm
+    });
     
     //chrome.storage.local.set({'mtime': finaltime});
     chrome.storage.local.set({'time': wpm});
