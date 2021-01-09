@@ -16,4 +16,5 @@ chrome.runtime.onMessage.addListener(
         else{
             chrome.browserAction.setIcon({path: "Daily Typer.png"});
         }
-    });
+});
+

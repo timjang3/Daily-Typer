@@ -28,7 +28,7 @@ document.addEventListener("visibilitychange", function () {
     if(!document.hidden) {
         chrome.storage.local.set({'time': wpm});
         chrome.runtime.sendMessage({
-            speed: wpm
+            speed: wpm,
         });
     }
   }, false);

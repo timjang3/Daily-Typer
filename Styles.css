@@ -1,16 +1,10 @@
 body{
-    width: 300px;
+    width: 250px;
     background-color: #222831;
 }
-#sentence {
-    margin-top: 15px;
-    font: 15px Courier, sans-serif;
-    text-align: center;
-    color: #dddddd;
-  }
 #wpm {
-    margin-top: 7px;
-    margin-bottom: 17px;
+    margin-top: 29px;
+    margin-bottom: 23px;
     font: 25px Courier, sans-serif;
     text-align: center;
     font-weight: bold;
@@ -31,6 +25,7 @@ button{
   font-weight: bold;
   border-radius: 4px;
   margin-top: 0px;
+  margin-bottom: 5px;
   border: none;
   padding: 4px 8px;
   display: inline-block;
