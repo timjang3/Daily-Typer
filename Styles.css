@@ -1,6 +1,6 @@
 body{
     width: 250px;
-    background-color: #222831;
+    background-color: #191919;
 }
 #wpm {
     margin-top: 29px;
@@ -8,7 +8,7 @@ body{
     font: 25px Courier, sans-serif;
     text-align: center;
     font-weight: bold;
-    color: #dddddd;
+    color: #8DD1C7;
     letter-spacing: 2px;
 }
 .wrapper {
@@ -20,7 +20,7 @@ body{
   top: 50%;
 }
 button{
-  background-color: #30475e;
+  background-color: #333333;
   font: 13px Courier, sans-serif;
   font-weight: bold;
   border-radius: 4px;
@@ -30,5 +30,5 @@ button{
   padding: 4px 8px;
   display: inline-block;
   cursor: pointer;
-  color: #dddddd;
+  color: #6D7271;
 }

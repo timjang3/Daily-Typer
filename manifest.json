@@ -6,12 +6,13 @@
 
     "browser_action": {
         "default_popup": "popup.html",
-        "default_icon": "Daily Typer.png"
+        "default_icon": "Daily TyperN.png"
     },
 
     "permissions":[
         "storage",
-        "activeTab"
+        "activeTab",
+        "tabs"
     ],
 
     "content_scripts": [

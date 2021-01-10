@@ -6,7 +6,16 @@ function reset(){
   typing = "";
   time = 0;
   chrome.storage.local.set({'reset': "yes"});
-  document.getElementById("wpm").innerHTML = 0 + " wpm";
+  chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+    var url = tabs[0].url;
+    if(url == "chrome://newtab/"){
+      document.getElementById("wpm").innerHTML = "Unavailable";
+    }
+    else{
+      document.getElementById("wpm").innerHTML = 0 + " wpm";
+    }
+    
+   });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -25,6 +34,13 @@ function updatePopup(){
       time = data.time;
       document.getElementById("wpm").innerHTML = data.time + " wpm";
     });
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+      var url = tabs[0].url;
+      if(url == "chrome://newtab/"){
+        document.getElementById("wpm").innerHTML = "Unavailable";
+        chrome.browserAction.setIcon({path: "Daily TyperN.png"});
+      }
+     });
     /*
     chrome.storage.local.get('typed', function(data) {
       document.getElementById("test").innerHTML = data.typed;
